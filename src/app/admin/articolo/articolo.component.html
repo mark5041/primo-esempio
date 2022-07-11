@@ -1,0 +1,28 @@
+<div class="well well-lg">
+    <p class="alert alert-info" style="font-size: 18px">
+      {{ articolo.marca }} {{ articolo.modello }}
+    </p>
+    <p style="font-size: 12px">
+      <a href="{{ articolo.link }}">{{ articolo.link }}</a>
+    </p>
+    <p>
+      <button type="button" class="{{ articolo.getStile() }}">
+        Gradimento:
+        <span class="badge">{{ articolo.voti }}</span>
+      </button>
+    </p>
+  
+    <p>
+      <a href (click)="miPiace()">
+        <i class="glyphicon glyphicon-thumbs-up"></i>
+        Mi piace
+      </a>
+    </p>
+  
+    <p>
+      <a href (click)="nonPiace()">
+        <i class="glyphicon glyphicon-thumbs-down"></i>
+        Non mi piace
+      </a>
+    </p>
+  </div>
